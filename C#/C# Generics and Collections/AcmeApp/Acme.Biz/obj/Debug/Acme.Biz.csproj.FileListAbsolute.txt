@@ -1,0 +1,9 @@
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\bin\Debug\Acme.Biz.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\bin\Debug\Acme.Biz.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\bin\Debug\Acme.Common.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\bin\Debug\Acme.Common.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\obj\Debug\Acme.Biz.csproj.AssemblyReference.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\obj\Debug\Acme.Biz.csproj.CoreCompileInputs.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\obj\Debug\Acme.Biz.csproj.CopyComplete
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\obj\Debug\Acme.Biz.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Acme.Biz\obj\Debug\Acme.Biz.pdb

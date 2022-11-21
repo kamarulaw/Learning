@@ -1,0 +1,12 @@
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.BizTests.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.BizTests.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.Biz.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.Common.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.Biz.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\bin\Debug\Acme.Common.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\obj\Debug\Acme.BizTests.csproj.AssemblyReference.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\obj\Debug\Acme.BizTests.csproj.CoreCompileInputs.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\obj\Debug\Acme.BizTests.csproj.CopyComplete
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\obj\Debug\Acme.BizTests.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\CSharpBP-Collections\AcmeApp\Tests\Acme.BizTests\obj\Debug\Acme.BizTests.pdb
