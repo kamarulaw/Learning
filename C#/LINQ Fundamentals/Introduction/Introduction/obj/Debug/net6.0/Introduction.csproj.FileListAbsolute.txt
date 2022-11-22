@@ -1,0 +1,15 @@
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\bin\Debug\net6.0\Introduction.exe
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\bin\Debug\net6.0\Introduction.deps.json
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\bin\Debug\net6.0\Introduction.runtimeconfig.json
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\bin\Debug\net6.0\Introduction.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\bin\Debug\net6.0\Introduction.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.csproj.AssemblyReference.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.AssemblyInfoInputs.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.AssemblyInfo.cs
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.csproj.CoreCompileInputs.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\refint\Introduction.dll
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.pdb
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\Introduction.genruntimeconfig.cache
+C:\Users\adelawal.REDMOND\OneDrive - Microsoft\Introduction\Introduction\obj\Debug\net6.0\ref\Introduction.dll
