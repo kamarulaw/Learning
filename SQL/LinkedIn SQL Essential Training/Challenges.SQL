@@ -62,9 +62,9 @@ FROM Customer c
 INNER JOIN Invoice i ON i.CustomerId = c.CustomerId
 INNER JOIN Employee e ON e.EmployeeId = c.SupportRepId
 WHERE 
-	(cast(strftime('%Y', InvoiceDate) as INT) = 2011 OR cast(strftime('%Y', InvoiceDate) as INT) = 2012) 
+  (cast(strftime('%Y', InvoiceDate) as INT) = 2011 OR cast(strftime('%Y', InvoiceDate) as INT) = 2012) 
 AND 
-	i.Total > 11.66
+  i.Total > 11.66
 GROUP BY e.EmployeeId
 
 --
