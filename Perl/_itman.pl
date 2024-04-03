@@ -1,8 +1,8 @@
-# state variables in Perl remind me of static variables in Java
-# state variables belong to their subroutine ~ static variables belong to their class (?)
-
 use warnings; 
 use strict; 
+
+# state variables in Perl remind me of static variables in Java
+# state variables belong to their subroutine ~ static variables belong to their class (?)
 
 my $datestring = localtime( time );
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
