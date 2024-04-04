@@ -19,11 +19,12 @@ sub math {
     #}
 }
 ######################################################################################################################################
+
 use warnings; 
 use strict; 
 
 
-sub subr {
+sub IndexLevelAverage {
     # Compute the index-level average for the five length-ten input arrays
     my (@arr1, @arr2, @arr3, @arr4, @arr5) = @_; 
 }
@@ -46,10 +47,14 @@ foreach my $item (@a1) {
 
 my @array_of_arrays = (@a1, @a2, @a3, @a4, @a5); 
 
-for (my $i = 0; $i < scalar @array_of_arrays; $i++){
-    
-    my @current_array = $array_of_arrays[$i]; 
-    
-    &PrintArray(@current_array);
-
-}
+&PrintArray(@array_of_arrays[0]);
+&PrintArray(@array_of_arrays[1]);
+&PrintArray(@array_of_arrays[2]);
+&PrintArray(@array_of_arrays[3]);
+&PrintArray(@array_of_arrays[4]);
+#for (my $i = 0; $i < scalar @array_of_arrays; $i++){
+#    
+#    my @current_array = $array_of_arrays[$i]; 
+#    
+#    &PrintArray(@current_array);
+#}
