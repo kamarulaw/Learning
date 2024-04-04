@@ -18,3 +18,40 @@ sub math {
     #    print $_ , simplehash{$_}; 
     #}
 }
+
+sub subr {
+    # Compute the index-level average for the five length-ten input arrays
+    my (@arr1, @arr2, @arr3, @arr4, @arr5) = @_; 
+}
+
+sub PrintArray {
+    my (@arr) = @_; 
+    for (my $i = 0; $i < scalar @arr; $i++) {
+        print "$arr[$i]\t"; 
+    }
+    print "\n";
+}
+
+my @a1 = (1..10); 
+my @a2 = (); 
+my @a3 = (); 
+my @a4 = (); 
+my @a5 = ();
+
+foreach my $item (@a1) {
+    push(@a2, $item * 10); 
+    push(@a3, $item * 20); 
+    push(@a4, $item * 30); 
+    push(@a5, $item + 4); 
+}
+
+print scalar @a2 , "\n"; 
+print scalar @a3 , "\n"; 
+print scalar @a4 , "\n"; 
+print scalar @a5 , "\n"; 
+
+my @array_of_arrays = (@a1, @a2, @a3, @a4, @a5); 
+for (my $i = 0; $i < scalar @array_of_arrays; $i++){
+    my @current_array = $array_of_arrays[i]; 
+    &PrintArray(@current_array);
+}
