@@ -63,3 +63,28 @@ foreach my $item (@a1) {
 #&PrintArray(@array_of_arrays[3]);
 #&PrintArray(@array_of_arrays[4]);
 # HINT: https://www.perlmonks.org/?node_id=862178 (Passint two arrays to a subrroutine)
+######################################################################################################################################
+use warnings; 
+use strict; 
+
+sub AnnualPopulationDifference {
+    # Compute difference in populations between 2010 and 2011
+    my ($hashref1, $hashref2) = @_; 
+    
+    my %result = ();
+    
+    for (keys %$hashref1) {
+        $result{$_} = %$hashref2{$_} - %$hashref1{$_}; 
+        
+    }
+    return %result; 
+}
+
+my %Population2010 = ("China" => 10, "India" => 15, "Nigeria" => 20); 
+my %Population2011 = ("China" => 200, "India" => 300, "Nigeria" => 400); 
+
+my %apd = &AnnualPopulationDifference(\%Population2010, \%Population2011);
+
+for (keys %apd) {
+    print "$_\[Delta\]: $apd{$_}\n"; 
+}
