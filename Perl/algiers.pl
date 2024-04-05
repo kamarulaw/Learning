@@ -88,3 +88,50 @@ my %apd = &AnnualPopulationDifference(\%Population2010, \%Population2011);
 for (keys %apd) {
     print "$_\[Delta\]: $apd{$_}\n"; 
 }
+
+######################################################################################################################################
+# Exercise 9 - Subroutines
+
+#make a subroutine that calculates the reverse complement of a DNA sequence
+sub str_rev {
+    my ($DNAarr) = @_;
+    my $DNAlen = scalar @$DNAarr;
+    for (my $i = 0; $i < $DNAlen / 2; $i++) 
+    {
+        my $temp = @$DNAarr[$i]; 
+        @$DNAarr[$i] = @$DNAarr[$DNAlen - 1 - $i];
+        @$DNAarr[$DNAlen - 1 - $i] = $temp; 
+    }
+    return @$DNAarr;
+}
+
+sub str_comp {
+    my ($DNAarr) = @_; 
+    my @DNAcomp = (); 
+    foreach my $elem(@$DNAarr) 
+    {
+        if ($elem eq "A") {
+            push(@DNAcomp, "T");
+        } elsif ($elem eq "C") {
+            push(@DNAcomp, "G");
+        } elsif ($elem eq "G") {
+            push(@DNAcomp, "C");
+        } else {
+            push(@DNAcomp, "A");
+        }
+    }
+    return @DNAcomp;
+}
+
+@arr = ("A", "G","C","G","T","A");
+@revarr = &str_rev(\@arr);
+@dnacomp = &str_comp(\@revarr);
+
+foreach my $elem (@revarr) {
+    print "$elem\n";
+}
+print "\n";
+
+foreach my $elem (@dnacomp) {
+    print "$elem\n";
+}
