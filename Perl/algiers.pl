@@ -24,12 +24,9 @@ use strict;
 
 sub IndexLevelAverage {
     # Compute the Index-level Average for the five length-ten input arrays
+    
     my ($arr1, $arr2, $arr3, $arr4, $arr5) = @_; 
-    print scalar @$arr1 , "\t"; 
-    print scalar @$arr2 , "\t"; 
-    print scalar @$arr3 , "\t"; 
-    print scalar @$arr4 , "\t"; 
-    print scalar @$arr5 , "\n";
+    
     my @result = ();
     
     for (my $i = 0; $i < 10; $i++) {
