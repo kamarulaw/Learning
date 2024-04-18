@@ -104,47 +104,35 @@ print &classification_on_length("elyse smith") . " years" , "\n";
 sub death_script {
     my ($gender, $smoker, $exercise, $alcohol, $fatty_food) = @_;
     
-    my $base_age = 70; 
-    
     $gender = uc(substr($gender, 0, 1));
     $smoker = uc(substr($smoker, 0, 1));
     $fatty_food = uc(substr($fatty_food, 0, 1));
     
-    if ($gender eq "F") 
-    {
-        $base_age += 4;
-    }
-    
-    if ($smoker eq "Y" || $smoker eq "T") 
-    {
-        $base_age -= 5;
-    }
-    
-    if ($smoker eq "N" || $smoker eq "F")
-    {
-        $base_age += 5; 
-    }
-    
-    if ($fatty_food eq "N" || $fatty_food eq "F") 
-    {
-        $base_age += 3;
-    }
-    
-    if ($exercise == 0) 
-    {
-        $base_age -= 3;
-    } else {
-        $base_age += $exercise; 
-    }
-    
+    my $base_age = 70;
     my $alc_units_gt_seven = $alcohol - 7; 
     
-    if ($alc_units_gt_seven >= 1) 
-    {
-        $base_age -= ($alc_units_gt_seven * .5);
-    }
-    
+    if ($gender eq "F") {$base_age += 4;}
+    if ($smoker eq "Y" || $smoker eq "T") {$base_age -= 5;}
+    if ($smoker eq "N" || $smoker eq "F") { $base_age += 5;}
+    if ($fatty_food eq "N" || $fatty_food eq "F") { $base_age += 3;}
+    if ($exercise == 0) { $base_age -= 3;} else { $base_age += $exercise;}
+    if ($alc_units_gt_seven >= 1) { $base_age -= ($alc_units_gt_seven * .5);}
     return $base_age;
 }
 
 print &death_script("male", "true", 2 , 10 , "yes") . "\n";
+
+sub passwordchecking_script {
+    my ($user, $op, $np) = @_;
+    
+    if ($op ne $np && length $np > 7 && lc($np) ne $np) 
+    {
+        return "$np OK";
+    }
+    return "$np !OK";
+}
+
+print &passwordchecking_script("klawal", "!OK", "okaypwd?") . "\n";
+print &passwordchecking_script("klawal", "!OK", "okaypwD?") . "\n";
+print &passwordchecking_script("klawal", "okaypwD?", "okaypwD?") . "\n";
+print &passwordchecking_script("klawal", "okaypwd?", "okaypwD?") . "\n";
