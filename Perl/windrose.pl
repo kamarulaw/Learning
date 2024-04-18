@@ -122,6 +122,7 @@ sub death_script {
 
 print &death_script("male", "true", 2 , 10 , "yes") . "\n";
 
+#3d 
 sub passwordchecking_script {
     my ($user, $op, $np) = @_;
     
@@ -136,3 +137,16 @@ print &passwordchecking_script("klawal", "!OK", "okaypwd?") . "\n";
 print &passwordchecking_script("klawal", "!OK", "okaypwD?") . "\n";
 print &passwordchecking_script("klawal", "okaypwD?", "okaypwD?") . "\n";
 print &passwordchecking_script("klawal", "okaypwd?", "okaypwD?") . "\n";
+
+# Exercise 4: Arrays (and loops)
+
+#4a
+sub snowwhite_script{
+    my @dwarves = ("Doc","Sneezy","Grumpy","Happy","Bashful","Sleepy","Dopey");
+    for (my $i = 0; $i < scalar @dwarves; $i++) 
+    {
+        print "Hi ho! \[$dwarves[$i]\]\n"
+    }
+}
+
+&snowwhite_script();
