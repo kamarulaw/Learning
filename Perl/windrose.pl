@@ -1,3 +1,4 @@
+# Babraham Bioinformatics
 use warnings; 
 use strict; 
 
@@ -98,3 +99,52 @@ print &classification_on_length("elyse sm") . " years" , "\n";
 print &classification_on_length("elyse smi") . " years" , "\n";
 print &classification_on_length("elyse smit") . " years" , "\n";
 print &classification_on_length("elyse smith") . " years" , "\n";
+
+#3c 
+sub death_script {
+    my ($gender, $smoker, $exercise, $alcohol, $fatty_food) = @_;
+    
+    my $base_age = 70; 
+    
+    $gender = uc(substr($gender, 0, 1));
+    $smoker = uc(substr($smoker, 0, 1));
+    $fatty_food = uc(substr($fatty_food, 0, 1));
+    
+    if ($gender eq "F") 
+    {
+        $base_age += 4;
+    }
+    
+    if ($smoker eq "Y" || $smoker eq "T") 
+    {
+        $base_age -= 5;
+    }
+    
+    if ($smoker eq "N" || $smoker eq "F")
+    {
+        $base_age += 5; 
+    }
+    
+    if ($fatty_food eq "N" || $fatty_food eq "F") 
+    {
+        $base_age += 3;
+    }
+    
+    if ($exercise == 0) 
+    {
+        $base_age -= 3;
+    } else {
+        $base_age += $exercise; 
+    }
+    
+    my $alc_units_gt_seven = $alcohol - 7; 
+    
+    if ($alc_units_gt_seven >= 1) 
+    {
+        $base_age -= ($alc_units_gt_seven * .5);
+    }
+    
+    return $base_age;
+}
+
+print &death_script("male", "true", 2 , 10 , "yes") . "\n";
