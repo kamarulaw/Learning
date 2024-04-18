@@ -48,6 +48,8 @@ print &string_len("Antidisestablishmentarianism");
 print &string_len("Pneumonoultramicroscopicsilicovolcanoconiosis");
 
 # Exercise 3: Conditions
+
+#3a
 sub is_palindromic {
     my ($str) = @_; 
     my $string_length = length $str; 
@@ -67,3 +69,32 @@ print &is_palindromic("123456787654321");
 print &is_palindromic("12345677654321");
 print &is_palindromic("1234567654321");
 print &is_palindromic("1234654321");
+
+#3b
+sub classification_on_length {
+    my ($str) = @_;
+    my $str_len = length $str; 
+    if ($str_len <= 3) {
+        return 5;
+    } elsif ($str_len <= 4) {
+        return 6; 
+    } elsif ($str_len <= 6) {
+        return 8; 
+    } elsif ($str_len <= 10) {
+        return 10; 
+    } elsif ($str_len > 10) {
+        return 12; 
+    }
+}
+
+print &classification_on_length("e") . " years" , "\n";
+print &classification_on_length("el") . " years" , "\n";
+print &classification_on_length("ely") . " years" , "\n";
+print &classification_on_length("elys") . " years" , "\n";
+print &classification_on_length("elyse") . " years" , "\n";
+print &classification_on_length("elyse ") . " years" , "\n";
+print &classification_on_length("elyse s") . " years" , "\n";
+print &classification_on_length("elyse sm") . " years" , "\n";
+print &classification_on_length("elyse smi") . " years" , "\n";
+print &classification_on_length("elyse smit") . " years" , "\n";
+print &classification_on_length("elyse smith") . " years" , "\n";
