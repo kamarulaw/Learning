@@ -31,7 +31,6 @@ sub formula {
     my $denominator = $c; 
     return $numerator / $denominator;
 }
-
 print &formula(2, 3 , 4) . "\n";
 print &formula(-20 , 5 , 3) . "\n"; 
 
@@ -42,7 +41,6 @@ sub string_len {
     my ($var) = @_; 
     return "The string \'$var\' is " . length $var , " letters long \n"; 
 }
-
 print &string_len("Perl");
 print &string_len("Sisyphean");
 print &string_len("Antidisestablishmentarianism");
@@ -63,7 +61,6 @@ sub is_palindromic {
     }
     return "$str a palindrome \( ? \) | true\n";
 }
-
 print &is_palindromic("chickennekcihc");
 print &is_palindromic("burgerssregrub");
 print &is_palindromic("123456787654321");
@@ -87,7 +84,6 @@ sub classification_on_length {
         return 12; 
     }
 }
-
 print &classification_on_length("e") . " years" , "\n";
 print &classification_on_length("el") . " years" , "\n";
 print &classification_on_length("ely") . " years" , "\n";
@@ -119,7 +115,6 @@ sub death_script {
     if ($alc_units_gt_seven >= 1) { $base_age -= ($alc_units_gt_seven * .5);}
     return $base_age;
 }
-
 print &death_script("male", "true", 2 , 10 , "yes") . "\n";
 
 #3d 
@@ -132,7 +127,6 @@ sub passwordchecking_script {
     }
     return "$np !OK";
 }
-
 print &passwordchecking_script("klawal", "!OK", "okaypwd?") . "\n";
 print &passwordchecking_script("klawal", "!OK", "okaypwD?") . "\n";
 print &passwordchecking_script("klawal", "okaypwD?", "okaypwD?") . "\n";
@@ -148,5 +142,46 @@ sub snowwhite_script{
         print "Hi ho! \[$dwarves[$i]\]\n"
     }
 }
-
 &snowwhite_script();
+
+#4b
+sub random_array_population {
+    my @arr = (); 
+    for (my $i = 0; $i < 100; $i++) 
+    {
+        push(@arr, 1 + int(rand(100)));
+    }
+    
+    @arr = sort {$a <=> $b} @arr; 
+    
+    for (my $i = 0; $i < 10; $i++) 
+    {
+        print $arr[$i] . "\t";
+    }
+}
+
+print &random_array_population() . "\n"; 
+
+#4c 
+sub dna_primer_melt_temperature() {
+    my ($dna_primer) = @_;
+    my $melt_temperature = 0; 
+    for (my $i = 0; $i < length $dna_primer; $i++) 
+    {
+        if (substr($dna_primer, $i, 1) eq "G" || substr($dna_primer, $i, 1) eq "C")
+        {
+            $melt_temperature += 4;
+        }
+        
+        if (substr($dna_primer, $i, 1) eq "A" || substr($dna_primer, $i, 1) eq "T" || substr($dna_primer, $i, 1) eq "U")
+        {
+            $melt_temperature += 2;
+        }
+    }
+    return $melt_temperature
+}
+
+print "melt temperature: " . &dna_primer_melt_temperature("AGGCT") , "\n";
+print "melt temperature: " . &dna_primer_melt_temperature("TAACTGTAACTCCTAGGTA") , "\n";
+
+# Exercise 5: Hashes (and loops)
