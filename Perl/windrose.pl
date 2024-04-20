@@ -185,3 +185,23 @@ print "melt temperature: " . &dna_primer_melt_temperature("AGGCT") , "\n";
 print "melt temperature: " . &dna_primer_melt_temperature("TAACTGTAACTCCTAGGTA") , "\n";
 
 # Exercise 5: Hashes (and loops)
+
+#5a
+sub sorted_amino_acids {
+    # weight in Daltons
+    my %aminoacid_mw_kvpairs = ("Ala" => 89, "Arg" => 174, "Asn" => 132, "Asp" => 133, "Asx" => 133, "Cys" => 121, "Gln" => 146, "Glu" => 147, "Glx" => 147, "Gly" => 75, "His" => 155, "Ile" => 131, "Leu" => 131, "Lys" => 146, "Met" => 149, "Phe" => 165, "Pro" => 115, "Ser" => 105, "Thr" => 119, "Trp" => 204, "Tyr" => 181, "Val" => 117);
+    
+    my @keys_sorted_by_val = sort {$aminoacid_mw_kvpairs{$a} <=> $aminoacid_mw_kvpairs{$b}} keys(%aminoacid_mw_kvpairs);
+    my @vals = @aminoacid_mw_kvpairs{@keys_sorted_by_val};
+    
+    my %aminoacid_mw_kvpairs_sorted; 
+    
+    for (my $i = 0; $i < scalar @keys_sorted_by_val; $i++) 
+    {
+        $aminoacid_mw_kvpairs_sorted{@keys_sorted_by_val[$i]} = @vals[$i];
+        print @keys_sorted_by_val[$i] . " ";
+    }
+    
+}
+
+&sorted_amino_acids();
