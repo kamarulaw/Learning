@@ -201,7 +201,99 @@ sub sorted_amino_acids {
         $aminoacid_mw_kvpairs_sorted{@keys_sorted_by_val[$i]} = @vals[$i];
         print @keys_sorted_by_val[$i] . " ";
     }
-    
+    print "\n";
 }
 
 &sorted_amino_acids();
+
+# Exercise 6: Loops
+
+#6a
+sub is_prime {
+    my ($num) = @_; my $true = "True"; my $false = "False";
+    if ($num == 2 || $num == 3) {return $true;}
+    if ($num == 1 || $num % 2 == 0) {return $false;}
+    for (my $i = 3; $i < 1 + int(sqrt($num)); $i++) {if ($num % $i == 0) {return $false;}}
+    return $true; 
+}
+
+sub nth_prime {
+    my ($n) = @_;
+    my $primes_found = 0;
+    my $guess = 2; 
+    while ($primes_found < $n)
+    {
+        if (&is_prime($guess) eq "True") {$primes_found++;}
+        if ($primes_found == $n) {return $guess;} else {$guess++;}
+    }
+}
+
+print &nth_prime(100) . "\n";
+
+# Exercise 10: Subroutines
+
+#10a 
+sub str_to_lst {
+    my ($str) = @_;
+    my @result = ();
+    for (my $i = 0; $i < length $str; $i++) 
+    {
+        push(@result, substr($str, $i, 1));
+    }
+    return @result; 
+}
+
+sub str_rev {
+    my ($DNAarr) = @_;
+    my $DNAlen = scalar @$DNAarr;
+    for (my $i = 0; $i < $DNAlen / 2; $i++) 
+    {
+        my $temp = @$DNAarr[$i]; 
+        @$DNAarr[$i] = @$DNAarr[$DNAlen - 1 - $i];
+        @$DNAarr[$DNAlen - 1 - $i] = $temp;
+    }
+    return @$DNAarr;
+}
+
+sub str_comp {
+    my ($DNAarr) = @_; 
+    my @DNAcomp = (); 
+    foreach my $elem(@$DNAarr) 
+    {
+        if ($elem eq "A") {
+            push(@DNAcomp, "T");
+        } elsif ($elem eq "C") {
+            push(@DNAcomp, "G");
+        } elsif ($elem eq "G") {
+            push(@DNAcomp, "C");
+        } elsif ($elem eq "a") {
+            push(@DNAcomp, "t");
+        } elsif ($elem eq "c") {
+            push(@DNAcomp, "g");
+        } elsif ($elem eq "g") {
+            push(@DNAcomp, "c");
+        } elsif ($elem eq "T") {
+            push(@DNAcomp, "A")
+        } elsif ($elem eq "t") {
+            push(@DNAcomp, "a");
+        }
+    }
+    return @DNAcomp;
+}
+
+sub display_list {
+    my (@lst) = @_; 
+    for (my $i = 0; $i < scalar @lst; $i++)
+    {
+        print $lst[$i] . " ";
+    }
+    print "\n";
+}
+
+my $dnasequence = "AgcctA";
+my @dnasequence_arr = &str_to_lst($dnasequence);
+my @dnasequence_reverse = &str_rev(\@dnasequence_arr);
+my @dnasequence_reverse_comp = &str_comp(\@dnasequence_reverse);
+
+print "REVERSECOMPLEMENT($dnasequence) = "; 
+&display_list(@dnasequence_reverse_comp);
