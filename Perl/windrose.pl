@@ -198,8 +198,8 @@ sub sorted_amino_acids {
     
     for (my $i = 0; $i < scalar @keys_sorted_by_val; $i++) 
     {
-        $aminoacid_mw_kvpairs_sorted{@keys_sorted_by_val[$i]} = @vals[$i];
-        print @keys_sorted_by_val[$i] . " ";
+        #$aminoacid_mw_kvpairs_sorted{@keys_sorted_by_val[$i]} = @vals[$i];
+        #print @keys_sorted_by_val[$i] . " ";
     }
     print "\n";
 }
@@ -297,3 +297,52 @@ my @dnasequence_reverse_comp = &str_comp(\@dnasequence_reverse);
 
 print "REVERSECOMPLEMENT($dnasequence) = "; 
 &display_list(@dnasequence_reverse_comp);
+
+#10b
+sub generate_random_dataset { 
+    my @random_dataset = ();
+    my $b = int(rand(10));
+    for (my $i = 0; $i < 11+$b; $i++) 
+    {
+        push(@random_dataset, int(rand(100)));
+    }
+    return @random_dataset;
+}
+
+my @random_dataset = &generate_random_dataset(); &display_list(@random_dataset);
+
+sub mean {
+    my ($arr) = @_;
+    my $arr_len = scalar @$arr;
+    my $total = 0;
+    for (my $i = 0; $i < $arr_len; $i++)
+    {
+        $total += @$arr[$i];
+    }
+    return $total / $arr_len; 
+}
+
+sub dev {
+    my ($arr) = @_;
+    my $arr_len = scalar @$arr; 
+    my $mean = &mean($arr);
+    my $summation = 0; 
+    for (my $i = 0; $i < $arr_len; $i++) 
+    {
+        $summation += (@$arr[$i] - $mean)**2; 
+    }
+    
+    my @result = ();
+    my $variance = ($summation)/($arr_len - 1);
+    push(@result, $variance);
+    push(@result, sqrt($variance));
+    return @result; 
+}
+my $random_dataset_mean = &mean(\@random_dataset);
+my @deviation = &dev(\@random_dataset);
+my $random_dataset_variance = $deviation[0];
+my $random_dataset_stdev = $deviation[1];
+
+print "random dataset mean: " . $random_dataset_mean , "\n"; 
+print "random dataset variance: " . $random_dataset_variance , "\n"; 
+print "random dataset standard deviation: " . $random_dataset_stdev , "\n"; 
