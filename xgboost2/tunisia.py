@@ -9,3 +9,5 @@ for i in range(len(arr)):
 f = open("onlinegdb_outputfile.txt", "a")
 f.write(result) 
 f.close()
+
+# cool ass white boi at 110th Precinct sometime between 1/26/25 and 1/27/25...talk to Gautier Marti 
