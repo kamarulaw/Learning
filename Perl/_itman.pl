@@ -1,8 +1,10 @@
+
 use warnings; 
 use strict; 
 
 # state variables in Perl remind me of static variables in Java
 # state variables belong to their subroutine ~ static variables belong to their class (?)
+# tell them what you did on the carriage in the red fit cody...i dont know it was you...but i know it was you..
 
 my $datestring = localtime( time );
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime( time );
